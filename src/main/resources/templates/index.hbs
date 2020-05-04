@@ -1,9 +1,27 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>모두의 체스</title>
+    <title>히히's 책장</title>
 </head>
 <body>
-<h1>Hello World</h1>
+<h1>히히's 책장</h1>
+<hr>
+<article>
+  <form action="add-book" method="post">
+    책 추가<br>
+    <input type="text" name="name" placeholder="책이름">
+    <input type="text" name="author" placeholder="저자">
+    <button type="submit">추가</button>
+  </form>
+  <hr>
+  <section>
+      <div>책 목록</div>
+      <div id="book-list">
+        {{#books}}
+          <div>이름 : {{name}}, 저자 : {{author}}</div>
+        {{/books}}
+      </div>
+  </section>
+</article>
 </body>
 </html>
